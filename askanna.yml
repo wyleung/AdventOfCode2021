@@ -1,0 +1,10 @@
+push-target: https://beta.askanna.eu/67Mm-2ULi-lFe0-cO2o/project/C3A2-fHGq-hz3i-1iNS
+
+day01:
+  job:
+    - echo "Check whether we can solve the example. Expect 7 increases"
+    - python day01/solution_part1.py day01/example_input.txt
+    - python day01/solution_part1.py day01/input.txt
+    - echo "Check whether we can solve the example. Expect 5 increases"
+    - python day01/solution_part2.py day01/example_input.txt
+    - python day01/solution_part2.py day01/input.txt

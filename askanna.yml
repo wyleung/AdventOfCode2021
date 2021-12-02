@@ -2,9 +2,22 @@ push-target: https://beta.askanna.eu/67Mm-2ULi-lFe0-cO2o/project/C3A2-fHGq-hz3i-
 
 day01:
   job:
+    - cd day02
     - echo "Check whether we can solve the example. Expect 7 increases"
-    - python day01/solution_part1.py day01/example_input.txt
-    - python day01/solution_part1.py day01/input.txt
+    - python solution_part1.py example_input.txt
+    - python solution_part1.py input.txt
     - echo "Check whether we can solve the example. Expect 5 increases"
-    - python day01/solution_part2.py day01/example_input.txt
-    - python day01/solution_part2.py day01/input.txt
+    - python solution_part2.py example_input.txt
+    - python solution_part2.py input.txt
+
+day02:
+  job:
+    - cd day02
+    - echo "Check whether we can solve the example. Expect horizontal position of 15 and a depth of 10 = 150"
+    - python solution_part1.py example_input.txt
+    - python solution_part1.py input.txt >> result.txt
+    - echo "Check whether we can solve the example. horizontal position of 15 and a depth of 60 = 900"
+    - python solution_part2.py example_input.txt
+    - python solution_part2.py input.txt >> result.txt
+  output:
+    result: day02/result.txt

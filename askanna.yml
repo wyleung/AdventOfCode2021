@@ -21,3 +21,17 @@ day02:
     - python solution_part2.py input.txt >> result.txt
   output:
     result: day02/result.txt
+
+day03:
+  job:
+    - cd day03
+    - echo "Check whether we can solve the example. the gamma rate is the binary number 10110, or 22 in decimal. the epsilon rate is 01001, or 9 in decimal"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result.txt
+    - python solution_part1.py input.txt >> result.txt
+    - echo "Check whether we can solve the example. the oxygen generator rating is 10111, or 23 in decimal. the CO2 scrubber rating is 01010, or 10 in decimal."
+    - python solution_part2.py example_input.txt
+    - echo "Solution part 2:" >> result.txt
+    - python solution_part2.py input.txt >> result.txt
+  output:
+    result: day03/result.txt

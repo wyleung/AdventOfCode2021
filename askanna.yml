@@ -35,3 +35,17 @@ day03:
     - python solution_part2.py input.txt >> result.txt
   output:
     result: day03/result.txt
+
+day06:
+  job:
+    - cd day06
+    - echo "Check whether we can solve the example. How many lanternfish would there be after 80 days? (5934)"
+    - python solution_part1.py example_input.txt 80
+    - echo "Solution part 1:" >> result.txt
+    - python solution_part1.py input.txt 80 >> result.txt
+    - echo "Check whether we can solve the example. After 256 days (26984457539)"
+    - python solution_part2.py example_input.txt 256
+    - echo "Solution part 2:" >> result.txt
+    - python solution_part2.py input.txt 256 >> result.txt
+  output:
+    result: day03/result.txt

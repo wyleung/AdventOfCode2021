@@ -48,4 +48,4 @@ day06:
     - echo "Solution part 2:" >> result.txt
     - python solution_part2.py input.txt 256 >> result.txt
   output:
-    result: day03/result.txt
+    result: day06/result.txt

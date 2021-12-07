@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import pprint
+# import pprint
 import sys
 
 input_file = sys.argv[1]
@@ -17,7 +17,7 @@ for final_position in range(min(input_dataset), max(input_dataset)):
     cost_table[final_position] = total_cost
 
 
-pprint.pprint(cost_table)
+# pprint.pprint(cost_table)
 
 lowest_fuel = min(cost_table.values())
 lowest_fuel_pos = list(filter(lambda x: x[1] == lowest_fuel, cost_table.items()))[0]

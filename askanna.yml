@@ -79,3 +79,35 @@ day08:
   output:
     artifact:
       - day08/result/
+
+day09:
+  job:
+    - cd day09
+    - mkdir -p result
+    - echo "Check whether we can solve the example. Expect 15"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result/result_part1.txt
+    - python solution_part1.py input.txt  >> result/result_part1.txt
+    - echo "Check whether we can solve the example. Expect 1134"
+    - python solution_part2.py example_input.txt
+    - echo "Solution part 2:" >> result/result_part2.txt
+    - python solution_part2.py input.txt  >> result/result_part2.txt
+  output:
+    artifact:
+      - day09/result/
+
+day12:
+  job:
+    - cd day12
+    - mkdir -p result
+    - echo "Check whether we can solve the example. Expect 10 paths"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result/result_part1.txt
+    - python solution_part1.py input.txt  >> result/result_part1.txt
+    - echo "Check whether we can solve the example. Expect 36 paths"
+    - python solution_part2.py example_input.txt
+    - echo "Solution part 2:" >> result/result_part2.txt
+    - python solution_part2.py input.txt  >> result/result_part2.txt
+  output:
+    artifact:
+      - day12/result/

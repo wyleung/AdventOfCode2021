@@ -1,5 +1,8 @@
 push-target: https://beta.askanna.eu/67Mm-2ULi-lFe0-cO2o/project/C3A2-fHGq-hz3i-1iNS
 
+environment:
+  image: python:3.9
+
 day01:
   job:
     - cd day02
@@ -111,3 +114,17 @@ day12:
   output:
     artifact:
       - day12/result/
+
+day13:
+  job:
+    - cd day13
+    - mkdir -p result
+    - echo "Check whether we can solve the example. Expect 17 dots"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result/result_part1.txt
+    - python solution_part1.py input.txt  >> result/result_part1.txt
+    - echo "Solution part 2:" >> result/result_part2.txt
+    - python solution_part2.py input.txt  >> result/result_part2.txt
+  output:
+    artifact:
+      - day13/result/

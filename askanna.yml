@@ -115,6 +115,22 @@ day12:
     artifact:
       - day12/result/
 
+day10:
+  job:
+    - cd day10
+    - mkdir -p result
+    - echo "Check whether we can solve the example. Expect 26397 points"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result/result_part1.txt
+    - python solution_part1.py input.txt  >> result/result_part1.txt
+    - echo "Check whether we can solve the example. Expect middle score of 288957"
+    - python solution_part2.py example_input.txt
+    - echo "Solution part 2:" >> result/result_part2.txt
+    - python solution_part2.py input.txt  >> result/result_part2.txt
+  output:
+    artifact:
+      - day10/result/
+
 day13:
   job:
     - cd day13

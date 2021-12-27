@@ -190,3 +190,17 @@ day14:
   output:
     artifact:
       - day14/result/
+
+day25:
+  job:
+    - cd day25
+    - mkdir -p result
+    - echo "Check whether we can solve the example. Expect 58"
+    - python solution_part1.py example_input.txt
+    - echo "Solution part 1:" >> result/result_part1.txt
+    - python solution_part1.py input.txt  >> result/result_part1.txt
+    - echo "Solution part 2:" >> result/result_part2.txt
+    - python solution_part2.py input.txt  >> result/result_part2.txt
+  output:
+    artifact:
+      - day25/result/
